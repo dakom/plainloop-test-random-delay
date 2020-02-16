@@ -23,10 +23,11 @@ function gameLoop(timestamp) {
     requestAnimationFrame(gameLoop);
     if(last_timestamp != undefined) {
         updatePhysics(timestamp - last_timestamp);
-        delay(Math.random() * 12);
         render();
     }
     last_timestamp = timestamp;
+
+    delay(Math.random() * 12);
 }
 
 function delay(ms) {
